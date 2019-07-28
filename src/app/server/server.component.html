@@ -1,4 +1,6 @@
-<button [disabled]="!allowNewServer">Add server</button>
+<button
+  [disabled]="!allowNewServer"
+  (click) = "onCreateServer()">Add server</button>
 <p>
   Server {{serverID}} is {{serverStatus}}
 </p>
