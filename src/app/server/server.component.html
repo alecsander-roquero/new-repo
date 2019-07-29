@@ -7,10 +7,13 @@
 <button
   [disabled]="!allowNewServer"
   (click) = "onCreateServer()">Add server</button>
-<p>
+<p [ngStyle]="{backgroundColor:getColor()}">
   Server {{serverID}} is {{serverStatus}}
 </p>
 <!--<p [innerText]="allowNewServer"></p>
 <p>{{ serverCreationStatus }}</p>-->
-<p *ngIf="isServerCreated">Server was created, server was {{ serverName }}</p>
+<p *ngIf="isServerCreated; else noServer">Server was created, server was {{ serverName }}</p>
+<ng-template #noServer>
+  <p>No server was created!</p>
+</ng-template>
 
