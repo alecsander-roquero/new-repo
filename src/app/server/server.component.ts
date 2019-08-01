@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
        .online {
             color: white;
        }
-  `],
+  `, 'node_modules/bootstrap/dist/css/bootstrap.min.css'],
 })
 export class ServerComponent implements OnInit {
   allowNewServer = false;
