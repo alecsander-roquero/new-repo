@@ -7,7 +7,8 @@
 <button
   [disabled]="!allowNewServer"
   (click) = "onCreateServer()">Add server</button>
-<p [ngStyle]="{backgroundColor:getColor()}">
+<p [ngClass]="{online: this.serverStatus === 'online'}"
+  [ngStyle]="{backgroundColor:getColor()}">
   Server {{serverID}} is {{serverStatus}}
 </p>
 <!--<p [innerText]="allowNewServer"></p>
