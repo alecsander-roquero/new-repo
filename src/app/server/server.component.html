@@ -7,8 +7,7 @@
 <button
   [disabled]="!allowNewServer"
   (click) = "onCreateServer()">Add server</button>
-<p [ngClass]="{online: this.serverStatus === 'online'}"
-  [ngStyle]="{backgroundColor:getColor()}"
+<p [ngClass]="{online: this.serverStatus === 'online'}" [ngStyle]="{backgroundColor:getColor()}"
   *ngFor="let server of servers">
   Server {{serverID}} is {{serverStatus}}
 </p>
@@ -18,4 +17,3 @@
 <ng-template #noServer>
   <p>No server was created!</p>
 </ng-template>
-
